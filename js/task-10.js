@@ -29,5 +29,9 @@ function destroyBoxes() {
   boxesEl.reset();
 }
 
-btnCreate.addEventListener('click', createBoxes);
+btnCreate.addEventListener('click', () => {
+  const amount = Number(inputEl.value);
+  console.log(amount);
+  createBoxes(amount);
+});
 //btnDestroy.addEventListener('click', destroyBoxes);
