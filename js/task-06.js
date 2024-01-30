@@ -11,7 +11,7 @@ const validationInput = document.querySelector("#validation-input");
 // });
 
 validationInput.addEventListener("blur", () => {
-    if(validationInput.value.length === Number(validationInput.getAttribute('data-length'))) {
+    if(validationInput.value.trim().length === Number(validationInput.getAttribute('data-length'))) {
         validationInput.classList.remove('invalid');
         validationInput.classList.add('valid');
     } else {
@@ -19,3 +19,5 @@ validationInput.addEventListener("blur", () => {
         validationInput.classList.add('invalid');
     }
 });
+
+//trim - удаляет пробелы с обеих сторон
